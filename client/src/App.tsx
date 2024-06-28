@@ -1,10 +1,17 @@
-import React from 'react'
+import React,{Suspense} from 'react'
+import { Outlet } from 'react-router-dom'
+import Header from './Header'
+import Footer from './Footer'
+
 
 const App: React.FC = () => {
   return (
-    <div>App
-      <h1 className='text-3xl text-red-400'>Hello</h1>
-    </div>
+    <>
+    <Header/>
+    <Outlet/>
+    <Suspense/>
+    <Footer/>
+    </>
   )
 }
 

@@ -5,3 +5,16 @@ npm create vite@latest client --template react-ts
 npm install -D tailwindcss postcss autoprefixer
 npx tailwindcss init -p
 
+<!-- installation de dépendances -->
+
+npm install dotenv
+
+npm install -D ts-node
+
+npm install -D @types/node
+
+npm i axios
+
+npm i lazy
+
+npm i react-router-dom
