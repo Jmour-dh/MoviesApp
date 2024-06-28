@@ -18,3 +18,5 @@ npm i axios
 npm i lazy
 
 npm i react-router-dom
+
+npm install --save-dev @types/react-slick

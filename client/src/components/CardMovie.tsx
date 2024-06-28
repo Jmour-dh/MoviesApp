@@ -1,14 +1,9 @@
 import React from 'react';
+import {CardMovieProps} from "../interfaces/movie.interface";
 
-interface CardMovieProps {
-  title: string;
-  releaseDate: string;
-  rating: number;
-  imageUrl: string;
-}
 
 const CardMovie: React.FC<CardMovieProps> = ({ title, releaseDate, rating, imageUrl }) => {
-  const formattedRating = (rating * 10).toFixed(1);
+  const formattedRating = (rating * 10).toFixed(0);
 
   const getRatingColor = (rating: number) => {
     if (rating >= 8) return 'stroke-green-500';
@@ -31,7 +26,7 @@ const CardMovie: React.FC<CardMovieProps> = ({ title, releaseDate, rating, image
         <div className="flex justify-between items-center mb-4">
           <span className="text-gray-600 text-sm">{releaseDate}</span>
           <div className="relative flex justify-center items-center">
-            <svg className="w-12 h-12 sm:w-16 sm:h-16 md:w-20 md:h-20 lg:w-12 lg:h-12">
+            <svg className="w-12 h-12 sm:w-12 sm:h-12 md:w-12 md:h-12 lg:w-12 lg:h-12">
               <circle
                 className="text-gray-300"
                 strokeWidth="4"
