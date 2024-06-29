@@ -30,7 +30,7 @@ const Movie: React.FC = () => {
   }
 
   return (
-    <div className="w-full mx-auto">
+    <div className="w-full mx-auto bg-black">
       <Banner movie={movie} />
       <ListOfSimilarMovies similarMovies={movie.similarMovies} />
     </div>

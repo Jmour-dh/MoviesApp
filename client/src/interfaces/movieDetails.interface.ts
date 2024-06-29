@@ -24,6 +24,8 @@ export interface Video {
 export interface SimilarMovie {
   id: number;
   title: string;
+  release_date: string;
+  vote_average: number; 
   poster_path: string;
 }
 

@@ -32,7 +32,7 @@ const Banner: React.FC<BannerProps> = ({ movie }) => {
             <img
               src={`https://image.tmdb.org/t/p/w300${movie.poster_path}`}
               alt={title}
-              className="w-40 h-60 md:w-auto md:h-auto rounded-lg mb-4 md:mb-0 md:mr-4"
+              className=" border border-yellow-300 w-40 h-60 md:w-auto md:h-auto rounded-lg mb-4 md:mb-0 md:mr-4"
             />
             <div className="w-[800px] md:text-left text-white">
               <h1 className="text-4xl font-bold mb-4">{title}</h1>

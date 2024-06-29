@@ -16,7 +16,7 @@ const CardMovie: React.FC<CardMovieProps> = ({ title, releaseDate, rating, image
 
   return (
     <div className="bg-white max-w-xs sm:max-w-sm md:max-w-md lg:max-w-xs rounded overflow-hidden shadow-lg m-4 border border-yellow-200">
-      <div className="relative">
+      <div className="relative h-[260px]">
         <img className="w-full" src={imageUrl} alt={title} />
         <div className="absolute top-0 left-0 w-full bg-black bg-opacity-50 text-white p-2 text-center">
           <div className="font-bold text-xl">{title}</div>
