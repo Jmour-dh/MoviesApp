@@ -3,7 +3,7 @@ import ListOfMoviesLatest from '../components/ListOfMoviesLatest';
 
 const Home: React.FC = () => {
   return (
-    <div className="container mx-auto">
+    <div className="container mx-auto bg-black">
       <ListOfMoviesLatest />
     </div>
   );

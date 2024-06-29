@@ -5,11 +5,11 @@ import 'slick-carousel/slick/slick-theme.css';
 import { CarouselProps } from '../interfaces/carousel.interface';
 
 const defaultSettings: Settings = {
-  dots: true,
   infinite: false,
   speed: 500,
   slidesToShow: 5,
   slidesToScroll: 5,
+  arrows: true, // Enable default arrows
   responsive: [
     {
       breakpoint: 1024,

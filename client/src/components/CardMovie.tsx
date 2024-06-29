@@ -15,7 +15,7 @@ const CardMovie: React.FC<CardMovieProps> = ({ title, releaseDate, rating, image
   const offset = circumference - (circumference * rating / 10);
 
   return (
-    <div className="max-w-xs sm:max-w-sm md:max-w-md lg:max-w-xs rounded overflow-hidden shadow-lg m-4">
+    <div className="bg-white max-w-xs sm:max-w-sm md:max-w-md lg:max-w-xs rounded overflow-hidden shadow-lg m-4 border border-yellow-200">
       <div className="relative">
         <img className="w-full" src={imageUrl} alt={title} />
         <div className="absolute top-0 left-0 w-full bg-black bg-opacity-50 text-white p-2 text-center">

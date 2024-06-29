@@ -8,8 +8,9 @@ const App: React.FC = () => {
   return (
     <>
     <Header/>
-    <Outlet/>
-    <Suspense/>
+    <Suspense >
+    <Outlet />
+    </Suspense>
     <Footer/>
     </>
   )

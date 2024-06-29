@@ -8,6 +8,7 @@ export interface Movie {
 }
 
 export interface CardMovieProps {
+  
   title: string;
   releaseDate: string;
   rating: number;
