@@ -20,11 +20,7 @@ const ListOfSimilarMovies: React.FC<ListOfSimilarMoviesProps> = ({ similarMovies
             renderItem={(similarMovie) => (
               <NavLink to={`/movie/${similarMovie.id}`}>
               <CardMovie
-                key={similarMovie.id}
-                title={similarMovie.title}
-                releaseDate={similarMovie.release_date}
-                rating={similarMovie.vote_average}
-                imageUrl={`https://image.tmdb.org/t/p/w500${similarMovie.poster_path}`}
+               movie={similarMovie}
               />
               </NavLink>
             )}

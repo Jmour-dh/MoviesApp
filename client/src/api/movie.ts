@@ -74,3 +74,20 @@ export const getPopularMovies = async () => {
         throw error;
     }
 };
+
+export const getAllMovies = async (category: string = 'popular') => {
+    try {
+        const url = `${API_URL}/movie/${category}`;
+
+        const response = await axios.get(url, {
+            params: {
+                api_key: API_KEY,
+            },
+        });
+
+        return response.data.results;
+    } catch (error) {
+        console.error("Erreur lors de la récupération des films:", error);
+        throw error;
+    }
+};

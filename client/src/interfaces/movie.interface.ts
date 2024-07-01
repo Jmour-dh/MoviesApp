@@ -1,4 +1,4 @@
-// interfaces/movie.interface.ts
+
 export interface Movie {
   id: number; 
   title: string;
@@ -13,4 +13,10 @@ export interface CardMovieProps {
   releaseDate: string;
   rating: number;
   imageUrl: string;
+}
+
+export interface AllMoviesProps {
+  selectedCategory: string;
+  startDate: string;
+  endDate: string;
 }

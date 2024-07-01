@@ -1,4 +1,3 @@
-// src/components/Banner.tsx
 import React, { useState } from 'react';
 import { MovieDetails } from '../interfaces/movieDetails.interface';
 
