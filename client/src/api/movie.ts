@@ -4,9 +4,6 @@ import { MovieDetails, Video, Credit, SimilarMovie } from '../interfaces/movieDe
 const API_URL = import.meta.env.VITE_TMDB_API_URL;
 const API_KEY = import.meta.env.VITE_TMDB_API_KEY;
 
-
-
-
 export const getLatestMovies = async () => {
     try {
         const response = await axios.get(`${API_URL}/movie/now_playing`, {
@@ -59,6 +56,21 @@ export const getMovieById = async (movieId: number): Promise<MovieDetails> => {
         };
     } catch (error) {
         console.error(`Erreur lors de la récupération du film avec l'ID ${movieId}:`, error);
+        throw error;
+    }
+};
+
+export const getPopularMovies = async () => {
+    try {
+        const response = await axios.get(`${API_URL}/movie/popular`, {
+            params: {
+                api_key: API_KEY,
+            },
+        });
+        
+        return response.data.results;
+    } catch (error) {
+        console.error("Erreur lors de la récupération des films les plus populaires:", error);
         throw error;
     }
 };

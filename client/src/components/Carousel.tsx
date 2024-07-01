@@ -9,7 +9,7 @@ const defaultSettings: Settings = {
   speed: 500,
   slidesToShow: 5,
   slidesToScroll: 5,
-  arrows: true, // Enable default arrows
+  arrows: true,
   responsive: [
     {
       breakpoint: 1024,

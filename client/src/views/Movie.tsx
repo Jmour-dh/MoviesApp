@@ -1,10 +1,10 @@
-// src/views/Movie.tsx
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { getMovieById } from '../api/movie';
 import { MovieDetails } from '../interfaces/movieDetails.interface';
 import Banner from '../components/Banner';
 import ListOfSimilarMovies from '../components/ListOfSimilarMovies';
+import Loading from '../components/Loading';
 
 const Movie: React.FC = () => {
   const { id } = useParams<{ id: string }>();
@@ -26,7 +26,7 @@ const Movie: React.FC = () => {
   }, [id]);
 
   if (!movie) {
-    return <div className="flex justify-center items-center h-screen">Loading...</div>;
+    return <Loading />;
   }
 
   return (
