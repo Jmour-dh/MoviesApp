@@ -24,7 +24,7 @@ const ListOfMoviesLatest: React.FC = () => {
 
   return (
     <div className="container mx-auto">
-      <h1 className="text-3xl font-bold my-4 text-white m-4 p-2">Latest movies</h1>
+      <h1 className="text-3xl font-bold  text-white mx-4 p-2">Latest movies</h1>
       {error && <p className="text-red-500">{error}</p>}
       <div className="flex justify-center">
         <div className="w-full lg:w-4/5 xl:w-3/4">
