@@ -6,6 +6,7 @@ const Home = lazy(()=>import("./views/Home"));
 const Movie = lazy(()=>import("./views/Movie"))
 const Movies = lazy(()=>import("./views/Movies"))
 const Series = lazy(()=>import("./views/Series"))
+const Serie = lazy(()=>import("./views/Serie"))
 
 export const router = createBrowserRouter([
   {
@@ -28,6 +29,11 @@ export const router = createBrowserRouter([
         path: "/series",
         element: <Series />,
       },
+      {
+        path: "/serie/:id",
+        element: <Serie />,
+      },
+      
     ],
   },
 ]);

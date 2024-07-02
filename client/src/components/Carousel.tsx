@@ -1,4 +1,3 @@
-import React from 'react';
 import Slider, { Settings } from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
@@ -35,7 +34,7 @@ const defaultSettings: Settings = {
   ],
 };
 
-const Carousel: React.FC<CarouselProps> = ({ items, renderItem, settings = defaultSettings }) => {
+const Carousel = <T,>({ items, renderItem, settings = defaultSettings }: CarouselProps<T>) => {
   return (
     <Slider {...settings}>
       {items.map((item, index) => (

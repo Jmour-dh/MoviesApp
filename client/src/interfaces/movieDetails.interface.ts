@@ -1,5 +1,3 @@
-// src/interfaces/moviedetails.interface.ts
-
 export interface Genre {
   id: number;
   name: string;

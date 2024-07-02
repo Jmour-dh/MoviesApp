@@ -1,4 +1,3 @@
-// src/components/ListOfSimilarMovies.tsx
 import React from 'react';
 import Carousel from './Carousel';
 import CardMovie from './CardMovie';

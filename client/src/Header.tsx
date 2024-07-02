@@ -5,8 +5,10 @@ const Header: React.FC = () => {
   const location = useLocation();
 
   const categories = [
-    { to: '/series', text: 'Series' },
+    { to: '/', text: 'Home' },
     { to: '/movies', text: 'Movies' },
+    { to: '/series', text: 'Series' },
+    
   ];
 
   const isActive = (path: string) => {
