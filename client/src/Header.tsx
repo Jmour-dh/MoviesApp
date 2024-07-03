@@ -1,5 +1,6 @@
 import React from 'react';
 import { NavLink, useLocation } from 'react-router-dom';
+import Search from './components/Search';
 
 const Header: React.FC = () => {
   const location = useLocation();
@@ -8,7 +9,6 @@ const Header: React.FC = () => {
     { to: '/', text: 'Home' },
     { to: '/movies', text: 'Movies' },
     { to: '/series', text: 'Series' },
-    
   ];
 
   const isActive = (path: string) => {
@@ -16,10 +16,10 @@ const Header: React.FC = () => {
   };
 
   return (
-    <header className="bg-gray-800 text-white py-4 flex justify-around">
+    <header className="bg-gray-800 text-white py-4 flex justify-between items-center px-4">
       <div>
-        <NavLink to={"/"}>
-          <h1 className="text-2xl font-bold pl-2">MovieApp</h1>
+        <NavLink to="/">
+          <h1 className="text-2xl font-bold">MovieApp</h1>
         </NavLink>
       </div>
       <nav className="flex space-x-6">
@@ -33,6 +33,9 @@ const Header: React.FC = () => {
           </NavLink>
         ))}
       </nav>
+      <div className="w-1/3">
+        <Search />
+      </div>
     </header>
   );
 };
