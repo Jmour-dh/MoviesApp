@@ -63,16 +63,13 @@ const BannerSerie: React.FC<BannerSerieProps> = ({ serie }) => {
       </div>
 
       {showTrailerModal && trailerKey && (
-        <div className="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-10">
+        <div className="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-20 px-4">
           <div className="relative w-full max-w-[560px]">
-            <button
-              onClick={closeTrailerModal}
-              className="absolute top-2 right-2 text-white text-xl"
-            >
+            <button onClick={closeTrailerModal} className="absolute top-2 right-2 text-white text-xl">
               &times;
             </button>
             <iframe
-              width="560"
+              width="100%"
               height="315"
               src={`https://www.youtube.com/embed/${trailerKey}`}
               title="YouTube video player"

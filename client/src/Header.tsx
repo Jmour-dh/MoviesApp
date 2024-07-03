@@ -16,13 +16,13 @@ const Header: React.FC = () => {
   };
 
   return (
-    <header className="bg-gray-800 text-white py-4 flex justify-between items-center px-4">
-      <div>
+    <header className="bg-gray-800 text-white py-4 flex flex-wrap items-center justify-between px-4 md:px-8">
+      <div className="flex-shrink-0 mb-4 md:mb-0">
         <NavLink to="/">
           <h1 className="text-2xl font-bold">MovieApp</h1>
         </NavLink>
       </div>
-      <nav className="flex space-x-6">
+      <nav className="flex-grow flex justify-center space-x-4 mb-4 md:mb-0">
         {categories.map((category, index) => (
           <NavLink
             key={index}
@@ -33,7 +33,7 @@ const Header: React.FC = () => {
           </NavLink>
         ))}
       </nav>
-      <div className="w-1/3">
+      <div className="w-full md:w-1/3">
         <Search />
       </div>
     </header>

@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect, useRef } from 'react';
 import { fetchSearchResults } from '../../api/search';
 import { SearchResult } from '../../interfaces/search.interface';

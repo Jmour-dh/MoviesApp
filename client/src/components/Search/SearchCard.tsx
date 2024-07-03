@@ -1,4 +1,3 @@
-// src/components/SearchCard.tsx
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import { SearchResult } from '../../interfaces/search.interface';
@@ -11,7 +10,6 @@ interface SearchCardProps {
 const SearchCard: React.FC<SearchCardProps> = ({ result, onClick }) => {
   return (
     <li
-      key={result.id}
       className="flex items-center p-2 border-b border-gray-200 hover:bg-gray-100"
     >
       <img
