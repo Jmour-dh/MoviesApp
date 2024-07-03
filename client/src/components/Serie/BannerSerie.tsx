@@ -8,13 +8,19 @@ interface BannerSerieProps {
 const BannerSerie: React.FC<BannerSerieProps> = ({ serie }) => {
   const { backdrop_path, name, overview, trailerKey, credits } = serie;
   const [showTrailerModal, setShowTrailerModal] = useState(false);
+  const [showNoVideoMessage, setShowNoVideoMessage] = useState(false);
 
   const openTrailerModal = () => {
-    setShowTrailerModal(true);
+    if (trailerKey) {
+      setShowTrailerModal(true);
+    } else {
+      setShowNoVideoMessage(true);
+    }
   };
 
   const closeTrailerModal = () => {
     setShowTrailerModal(false);
+    setShowNoVideoMessage(false); // Hide the message when closing the modal
   };
 
   return (
@@ -57,6 +63,9 @@ const BannerSerie: React.FC<BannerSerieProps> = ({ serie }) => {
               >
                 Watch Trailer
               </button>
+              {showNoVideoMessage && (
+                <p className="text-red-500 mt-2">No video available.</p>
+              )}
             </div>
           </div>
         </div>

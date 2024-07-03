@@ -8,13 +8,19 @@ interface BannerProps {
 const Banner: React.FC<BannerProps> = ({ movie }) => {
   const { backdrop_path, title, overview, trailerKey, credits } = movie;
   const [showTrailerModal, setShowTrailerModal] = useState(false);
+  const [showNoVideoMessage, setShowNoVideoMessage] = useState(false);
 
   const openTrailerModal = () => {
-    setShowTrailerModal(true);
+    if (trailerKey) {
+      setShowTrailerModal(true);
+    } else {
+      setShowNoVideoMessage(true);
+    }
   };
 
   const closeTrailerModal = () => {
     setShowTrailerModal(false);
+    setShowNoVideoMessage(false);
   };
 
   return (
@@ -57,6 +63,9 @@ const Banner: React.FC<BannerProps> = ({ movie }) => {
               >
                 Watch Trailer
               </button>
+              {showNoVideoMessage && (
+                <p className="text-red-500 mt-2">No video available.</p>
+              )}
             </div>
           </div>
         </div>
