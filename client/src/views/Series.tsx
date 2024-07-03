@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import AllSeries from '../components/AllSeries';
-import FilterSeries from '../components/FilterSeries';
+import AllSeries from '../components/Serie/AllSeries';
+import FilterSeries from '../components/Serie/FilterSeries';
 
 const Series: React.FC = () => {
     const [selectedCategory, setSelectedCategory] = useState<string>('popular');

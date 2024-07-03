@@ -1,6 +1,5 @@
-// src/components/MovieDetail.tsx
 import React from 'react';
-import { MovieDetails } from '../interfaces/movieDetails.interface';
+import { MovieDetails } from '../../interfaces/movieDetails.interface';
 
 interface MovieDetailProps {
   movie: MovieDetails;

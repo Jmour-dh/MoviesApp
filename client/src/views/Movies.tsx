@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import AllMovies from '../components/AllMovies';
-import Filter from '../components/Filter';
+import AllMovies from '../components/Movie/AllMovies';
+import Filter from '../components/Movie/Filter';
 
 const Movies: React.FC = () => {
     const [selectedCategory, setSelectedCategory] = useState<string>('popular');

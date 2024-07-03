@@ -1,6 +1,6 @@
 import React from 'react';
-import ListOfMoviesLatest from '../components/ListOfMoviesLatest';
-import ListOfMoviesPopular from '../components/ListOfMoviesPopular';
+import ListOfMoviesLatest from '../components/Movie/ListOfMoviesLatest';
+import ListOfMoviesPopular from '../components/Movie/ListOfMoviesPopular';
 
 const Home: React.FC = () => {
   return (

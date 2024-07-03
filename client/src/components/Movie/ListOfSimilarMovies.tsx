@@ -1,7 +1,7 @@
 import React from 'react';
-import Carousel from './Carousel';
+import Carousel from '../Carousel';
 import CardMovie from './CardMovie';
-import { SimilarMovie } from '../interfaces/movieDetails.interface';
+import { SimilarMovie } from '../../interfaces/movieDetails.interface';
 import { NavLink } from 'react-router-dom';
 
 interface ListOfSimilarMoviesProps {

@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useCallback } from 'react';
-import { getAllMovies } from '../api/movie';
-import { Movie,AllMoviesProps } from '../interfaces/movie.interface';
+import { getAllMovies } from '../../api/movie';
+import { Movie,AllMoviesProps } from '../../interfaces/movie.interface';
 import CardMovie from './CardMovie';
 import { NavLink } from 'react-router-dom';
 

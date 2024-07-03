@@ -1,6 +1,6 @@
 import React from 'react';
 import { NavLink, useLocation } from 'react-router-dom';
-import Search from './components/Search';
+import Search from './components/Search/Search';
 
 const Header: React.FC = () => {
   const location = useLocation();

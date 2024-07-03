@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useCallback } from 'react';
-import { getAllSeries } from '../api/serie';
-import { Series, AllSeriesProps } from '../interfaces/serie.interface';
+import { getAllSeries } from '../../api/serie';
+import { Series, AllSeriesProps } from '../../interfaces/serie.interface';
 import CardSerie from './CardSerie'; 
 import { NavLink } from 'react-router-dom';
 

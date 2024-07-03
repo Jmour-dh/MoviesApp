@@ -1,6 +1,6 @@
 // src/components/CardSerie.tsx
 import React from 'react';
-import { BaseSerie } from '../interfaces/serie.interface';
+import { BaseSerie } from '../../interfaces/serie.interface';
 
 interface CardSerieProps {
   serie: BaseSerie;

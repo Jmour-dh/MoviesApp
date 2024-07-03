@@ -1,8 +1,8 @@
 // src/components/ListOfSimilarSeries.tsx
 import React from 'react';
-import Carousel from './Carousel';
+import Carousel from '../Carousel';
 import CardSerie from './CardSerie';
-import { SimilarSeries } from '../interfaces/serieDetails.interface';
+import { SimilarSeries } from '../../interfaces/serieDetails.interface';
 import { NavLink } from 'react-router-dom';
 
 interface ListOfSimilarSeriesProps {

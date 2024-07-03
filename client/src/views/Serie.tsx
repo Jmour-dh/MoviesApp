@@ -3,8 +3,8 @@ import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { getSerieById } from '../api/serie';
 import { SeriesDetails } from '../interfaces/serieDetails.interface';
-import BannerSerie from '../components/BannerSerie';
-import ListOfSimilarSeries from '../components/ListOfSimilarSeries';
+import BannerSerie from '../components/Serie/BannerSerie';
+import ListOfSimilarSeries from '../components/Serie/ListOfSimilarSeries';
 import Loading from '../components/Loading';
 
 const Serie: React.FC = () => {

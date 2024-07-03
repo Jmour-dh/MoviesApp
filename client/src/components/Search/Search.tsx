@@ -1,8 +1,8 @@
-import React, { useState, useEffect, useRef } from 'react';
-import { NavLink } from 'react-router-dom';
-import { fetchSearchResults } from '../api/search';
-import { SearchResult } from '../interfaces/search.interface';
 
+import React, { useState, useEffect, useRef } from 'react';
+import { fetchSearchResults } from '../../api/search';
+import { SearchResult } from '../../interfaces/search.interface';
+import SearchCard from './SearchCard';
 
 const Search: React.FC = () => {
   const [query, setQuery] = useState('');
@@ -60,25 +60,7 @@ const Search: React.FC = () => {
       {isDropdownVisible && (
         <ul className="mt-4 max-h-80 overflow-y-scroll space-y-2 absolute bg-gray-800 w-full rounded-md z-20">
           {results.map((result) => (
-            <li key={result.id} className="flex items-center p-2 border-b border-gray-200 hover:bg-gray-100">
-              <img
-                src={`https://image.tmdb.org/t/p/w92${result.poster_path}`}
-                alt={result.title || result.name}
-                className="w-12 h-16 rounded-md object-cover mr-4"
-              />
-              <div className="flex-1">
-                <NavLink
-                  to={`/${result.media_type === 'movie' ? 'movie' : 'serie'}/${result.id}`}
-                  className="text-blue-600 hover:underline"
-                  onClick={handleResultClick}
-                >
-                  <h3 className="font-semibold">{result.title || result.name}</h3>
-                </NavLink>
-                <p className="text-sm text-gray-600">
-                  {result.media_type === 'movie' ? result.release_date : result.first_air_date}
-                </p>
-              </div>
-            </li>
+            <SearchCard key={result.id} result={result} onClick={handleResultClick} />
           ))}
         </ul>
       )}
