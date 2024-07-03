@@ -20,7 +20,7 @@ const BannerSerie: React.FC<BannerSerieProps> = ({ serie }) => {
 
   const closeTrailerModal = () => {
     setShowTrailerModal(false);
-    setShowNoVideoMessage(false); // Hide the message when closing the modal
+    setShowNoVideoMessage(false);
   };
 
   return (
